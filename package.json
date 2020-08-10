@@ -29,11 +29,6 @@
     "node-sass": "^4.14.1",
     "surge": "^0.21.6"
   },
-  "git": {
-    "scripts": {
-      "pre-push": "surge --project ./dist --domain mayaandkeshal.com"
-    }
-  },
   "scripts": {
     "css-build": "node-sass --omit-source-map-url src/sass/styles.scss src/css/styles.css",
     "css-watch": "npm run css-build -- --watch",
