@@ -5,12 +5,13 @@
 $family-sans-serif: "Apercu", "Roboto", sans-serif;
 $nav-button-right-spacing: 0px;
 $rose:#F5E5E5;
-$yellow: #FFE87B;
+$green:#C2D69B;
+$blue: #95B3D7;
 $purple: #2F1D42;
 $navbar-height: 3rem;
 $column-gap: 2rem;
 $footer-background-color: #0A0909;
-$link: rgb(215,33,133);
+$link: rgb(149,179,215);
 $grey: #F9F9FA;
 $navbar-item-active-color: $link;
 $table-cell-border-width: 0 0 0px;
@@ -215,7 +216,27 @@ p{
 }
 
 .quiz{
-  background-image: url("../images/geometry.png");
+  // background-image: url("../images/redwoods_grayscale.jpg");
+}
+
+.quiz:after{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url("../images/redwoods_grayscale.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 #proposal{
@@ -223,7 +244,7 @@ p{
 }
 
 #main{
-  background-image: url("../images/c-3-color.jpg");
+  background-image: url("../images/log_walking.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -239,7 +260,7 @@ p{
 }
 
 .rsvp-label:after{
-  background: linear-gradient(to bottom, transparent 0%, transparent 60%, $yellow 60%, $yellow 88%, transparent 88%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, $green 60%, $green 88%, transparent 88%);
   content: '';
   z-index: -1000;
   position: absolute;
@@ -250,7 +271,7 @@ p{
 }
 
 .rsvp-label-2{
-  background: linear-gradient(to bottom, transparent 0%, transparent 55%, $yellow 55%, $yellow 90%, transparent 90%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 55%, $green 55%, $green 90%, transparent 90%);
 }
 
 
