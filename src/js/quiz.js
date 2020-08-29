@@ -13,16 +13,16 @@ var questions = [
 $(document).ready(function () {
     $(document).on("click", ".true", function () {
         right = right + 1;
-        $(".true").css("background-color", "#44D37E");
+        $(".true").css("background-color", "#A1C065");
         $(".true").css("color", "white");
-        $(".false").css("background-color", "#2F1C42");
+        $(".false").css("background-color", "#596B81");
         $(".false").css("color", "white");
         window.setTimeout(nextQuestion, 1200);
     });
     $(document).on("click", ".false", function () {
-        $(".true").css("background-color", "#44D37E");
+        $(".true").css("background-color", "#A1C065");
         $(".true").css("color", "white");
-        $(".false").css("background-color", "#2F1C42");
+        $(".false").css("background-color", "#596B81");
         $(".false").css("color", "white");
         window.setTimeout(nextQuestion, 1200);
     });
