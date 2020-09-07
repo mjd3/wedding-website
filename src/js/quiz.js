@@ -6,7 +6,7 @@ var questions = [
     ["While dating in college, how often did Katie accidentally lock Mike out of his own dorm room?", "Never", "Maybe just one time", "Twice but who's counting?", "Tbh we lost track", "3"],
     ["In New York, what was our favorite Sunday morning routine?", "Takeout burritos with Mike’s roommates", "Bagel runs at Tompkins Square", "Eggs and bacon, obviously", "What morning? Sleeping past 2 pm", "1"],
     ["In the year and a half that we were long distance, what was our longest time zone difference?", "3 hours", "2 hours", "7 hours", "9 hours", "4"],
-    ["Approximately how many miles have we backpacked together?", "Around 100 miles", "Around 200 miles", "Around 300 miles", "Idk, but check Mike’s Strava for future updates", "4"],
+    ["Approximately how many miles have we backpacked together?", "Zero to 100 miles", "Between 100 and 200 miles", "Between 200 and 300 miles", "Idk, but check Mike’s Strava for future updates", "2"],
     ["Mike proposed in Berkeley in August 2019 – which of these things were NOT a part of the experience?", "A trail around sunset", "Katie getting lost and almost not arriving", "A casual long run", "Views of the Bay", "3"],
 ];
 

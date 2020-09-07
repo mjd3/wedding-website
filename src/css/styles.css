@@ -123,12 +123,6 @@ html, body {
   font-weight: 300 !important;
   font-size: 1.05em !important; }
 
-.faq {
-  background-image: url("../images/faq-background.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed; }
-
 .underline {
   border-bottom: 3px solid currentColor;
   padding-bottom: 6px; }
