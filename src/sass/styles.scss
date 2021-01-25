@@ -2,10 +2,11 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../node_modules/bulma/sass/utilities/functions";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 // $family-sans-serif: "Apercu", "Roboto", sans-serif;
 $font-serif: "Noto Serif", sans-serif;
+$font-script: "Parisienne", cursive;
 $nav-button-right-spacing: 0px;
 $rose:#F5E5E5;
 $green:#C2D69B;
@@ -311,7 +312,7 @@ p{
   position: fixed; 
   bottom: 10%; 
   text-align: center; 
-  font-family: "Dancing Script", cursive;
+  font-family: $font-script;
   color: white;
   font-size: 5.1em;
 }
