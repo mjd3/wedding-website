@@ -2,6 +2,7 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../node_modules/bulma/sass/utilities/functions";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 // $family-sans-serif: "Apercu", "Roboto", sans-serif;
 $font-serif: "Noto Serif", sans-serif;
@@ -13,9 +14,8 @@ $purple: #2F1D42;
 $navbar-height: 3rem;
 $column-gap: 2rem;
 $footer-background-color: #0A0909;
-$link: rgb(149,179,215);
+$link: $blue;
 $grey: #F9F9FA;
-$navbar-item-active-color: $link;
 $table-cell-border-width: 0 0 0px;
 $table-cell-border: none;
 $table-background-color: none;
@@ -245,11 +245,11 @@ p{
 }
 
 #main{
-  background-image: url("../images/log_walking.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: contain;
+  background: url("../images/beach_walking.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #rsvp{
@@ -298,6 +298,24 @@ p{
   color: $rose;
 }
 
+.home-nav-strong{
+  color: white;
+  
+  &:hover {
+    color: $blue
+  }
+}
+
+.home-bottom-bar{
+  width: 100%; 
+  position: fixed; 
+  bottom: 10%; 
+  text-align: center; 
+  font-family: "Dancing Script", cursive;
+  color: white;
+  font-size: 5.1em;
+}
+
 #footer{
   font-size: 10px !important;
 }
@@ -316,17 +334,17 @@ p{
   position:absolute;
 }
 
-@media (orientation: portrait) and (min-width: 600px){
-  #main{
-    background-image: url("../images/c-3-color-slim-ipad.jpg");
-  }
-}
+// @media (orientation: portrait) and (min-width: 600px){
+//   #main{
+//     background-image: url("../images/c-3-color-slim-ipad.jpg");
+//   }
+// }
 
-@media (orientation: portrait) and (max-width: 600px){
-  #main{
-    background-image: url("../images/c-3-color-slim.jpg");
-  }
-}
+// @media (orientation: portrait) and (max-width: 600px){
+//   #main{
+//     background-image: url("../images/c-3-color-slim.jpg");
+//   }
+// }
 
 @media only screen and (max-width: 768px) {
   .column-couple-text{
