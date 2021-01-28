@@ -1,10 +1,11 @@
 // 1. Import the initial variables
-@import "../../node_modules/bulma/sass/utilities/initial-variables";
-@import "../../node_modules/bulma/sass/utilities/functions";
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
-$family-sans-serif: "Cormorant Garamond", serif;
+$family-serif: "Cormorant Garamond", serif;
+$family-primary: $family-serif;
 $font-script: "Parisienne", cursive;
 $nav-button-right-spacing: 0px;
 $rose:#F5E5E5;
@@ -179,7 +180,7 @@ html,body{
 }
 
 // .faq{
-//   background-image: url("../images/faq-background.svg");
+//   background-image: url("/assets/images/faq-background.svg");
 //   background-repeat: no-repeat;
 //   background-position: center center;
 //   background-attachment: fixed;
@@ -207,26 +208,26 @@ p{
 }
 
 .the-couple{
-  background-image: url("../images/c-background.svg");
+  background-image: url("/assets/images/c-background.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
 }
 
 .schedule{
-  background-image: url("../images/c-background.svg");
+  background-image: url("/assets/images/c-background.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
 }
 
 // .quiz{
-//   // background-image: url("../images/redwoods_grayscale.jpg");
+//   // background-image: url("/assets/images/redwoods_grayscale.jpg");
 // }
 
 .quiz{
   background-attachment: fixed;
-    background-image: url(../images/redwoods_grayscale.jpg);
+    background-image: url("/assets/images/redwoods_grayscale.jpg");
     display: block;
     position: relative;
     left: 0;
@@ -248,7 +249,7 @@ p{
 }
 
 #main{
-  background: url("../images/beach_walking.jpg") no-repeat center center fixed; 
+  background: url("/assets/images/beach_walking.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -256,7 +257,7 @@ p{
 }
 
 #rsvp{
-  background-image: url("../images/geometry2.png");
+  background-image: url("/assets/images/geometry2.png");
 }
 .rsvp-label{
   position: relative;
@@ -348,13 +349,13 @@ p{
 
 // @media (orientation: portrait) and (min-width: 600px){
 //   #main{
-//     background-image: url("../images/c-3-color-slim-ipad.jpg");
+//     background-image: url("/assets/images/c-3-color-slim-ipad.jpg");
 //   }
 // }
 
 // @media (orientation: portrait) and (max-width: 600px){
 //   #main{
-//     background-image: url("../images/c-3-color-slim.jpg");
+//     background-image: url("/assets/images/c-3-color-slim.jpg");
 //   }
 // }
 
@@ -384,4 +385,5 @@ p{
     height: 10px !important;
   }
 }
-@import "../../node_modules/bulma/bulma";
+
+@import "bulma/bulma.sass"
