@@ -240,11 +240,7 @@ p{
     background-repeat: no-repeat;
 }
 
-#proposal{
-  border-radius: 10px;
-}
-
-#proposal2{
+.proposal-image {
   border-radius: 10px;
 }
 
@@ -300,6 +296,10 @@ p{
 .heart{
   font-size: 1.3em;
   color: $rose;
+}
+
+.home-logo {
+  color: white;
 }
 
 .home-nav-strong{
@@ -379,10 +379,25 @@ p{
   .schedule{
     background-image: none;
   }
+  .home-nav-strong {
+    color: #4a4a4a;
+
+    &:hover {
+      color: $blue;
+    }
+  }
 }
 @media only screen and (max-width: 1023px) {
   .scrolled-nav {
     height: 10px !important;
+  }
+
+  .home-nav-strong {
+    color: #4a4a4a;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
