@@ -1,11 +1,10 @@
 // 1. Import the initial variables
 @import "../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../node_modules/bulma/sass/utilities/functions";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
-// $family-sans-serif: "Apercu", "Roboto", sans-serif;
-$font-serif: "Noto Serif", sans-serif;
+$family-sans-serif: "Cormorant Garamond", serif;
 $font-script: "Parisienne", cursive;
 $nav-button-right-spacing: 0px;
 $rose:#F5E5E5;
@@ -96,6 +95,7 @@ html,body{
 }
 
 #global-nav {
+  font-size: 1.5em;
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -108,6 +108,7 @@ html,body{
 }
 
 .scrolled-nav {
+  font-size: 1.25em;
   background-color: $grey !important;
   height: 60px !important;
   line-height: 60px !important;
@@ -128,7 +129,7 @@ html,body{
 
 
 .date{
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.2em;
   color: grey;
 }
@@ -138,7 +139,7 @@ html,body{
 }
 
 .title{
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .logo{
@@ -152,18 +153,18 @@ html,body{
 }
 
 .thin{
-  font-weight: 300 !important;
-  font-size: 1.05em;
+  font-weight: 500 !important;
+  font-size: 1.2em;
 }
 
 .thin-grey{
-  font-weight: 300 !important;
-  font-size: 1.05em;
+  font-weight: 500 !important;
+  font-size: 1.2em;
   color: grey;
 }
 
 .thin-same{
-  font-weight: 300 !important;
+  font-weight: 500 !important;
 }
 
 .faq-questions{
@@ -190,6 +191,7 @@ html,body{
 }
 
 .upper-subtitle{
+  font-size: 1.25em;
   font-weight: 600;
 }
 
@@ -199,7 +201,7 @@ h1{
 
 p{
   margin-top: 1em !important;
-  font-weight: 400;
+  font-weight: 500;
   color: grey;
   line-height: 1.6em;
 }
@@ -307,14 +309,14 @@ p{
   }
 }
 
-.home-bottom-bar{
+#home-bottom-bar{
   width: 100%; 
   position: fixed; 
   bottom: 10%; 
   text-align: center; 
   font-family: $font-script;
   color: white;
-  font-size: 5.1em;
+  font-size: 5em;
 }
 
 #footer{
@@ -322,17 +324,26 @@ p{
 }
 
 .map-responsive{
-  overflow:hidden;
-  padding-bottom:56.25%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
   position:relative;
-  height:0;
+  height: 0;
 }
+
 .map-responsive iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 1em;
+}
+
+#todo-map {
+  height: 25%;
+  width: 50%;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 // @media (orientation: portrait) and (min-width: 600px){
