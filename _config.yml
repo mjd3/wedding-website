@@ -35,10 +35,6 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
 exclude:
   - .gitignore
   - .jekyll-cache/
