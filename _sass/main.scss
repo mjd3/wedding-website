@@ -207,24 +207,6 @@ p{
   line-height: 1.6em;
 }
 
-.the-couple{
-  background-image: url("/assets/images/c-background.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-.schedule{
-  background-image: url("/assets/images/c-background.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-// .quiz{
-//   // background-image: url("/assets/images/redwoods_grayscale.jpg");
-// }
-
 .quiz{
   background-attachment: fixed;
     background-image: url("/assets/images/redwoods_grayscale.jpg");
@@ -235,7 +217,7 @@ p{
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: hsla(0,0%,100%,0.8);
+    background-color: hsla(0,0%,100%,0.85);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }
@@ -251,6 +233,14 @@ p{
   -o-background-size: cover;
   background-size: cover;
 }
+
+// #schedule {
+//   background: url("/assets/images/cool_sky.jpg") no-repeat center center fixed; 
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
 #rsvp{
   background-image: url("/assets/images/geometry2.png");
@@ -310,14 +300,28 @@ p{
   }
 }
 
-#home-bottom-bar{
+#home-bottom-bar {
   width: 100%; 
   position: fixed; 
-  bottom: 10%; 
+  bottom: 15%;
+}
+
+#home-bottom-script{
+  position: relative;
+  top: 0;
   text-align: center; 
   font-family: $font-script;
   color: white;
   font-size: 5em;
+}
+
+#home-bottom-date{
+  position: relative; 
+  bottom: 0;
+  text-align: center; 
+  font-family: $family-serif;
+  color: white;
+  font-size: 2.5em;
 }
 
 #footer{
@@ -325,27 +329,22 @@ p{
 }
 
 .map-responsive{
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position:relative;
-  height: 0;
+  height: 400px;
+  position: relative;
 }
 
 .map-responsive iframe{
-  left: 0;
-  top: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
   border-radius: 1em;
 }
 
 #todo-map {
-  height: 25%;
-  width: 50%;
-  padding-left: 25%;
-  padding-right: 25%;
+  width: 80%;
+  left: 10%;
 }
+
 
 // @media (orientation: portrait) and (min-width: 600px){
 //   #main{
@@ -369,15 +368,6 @@ p{
     padding-left: 0em !important;
     padding-top: 0em !important;
     padding-right: 0em !important;
-  }
-  .the-couple{
-    background-image: none;
-  }
-  .faq{
-    background-image: none;
-  }
-  .schedule{
-    background-image: none;
   }
   .home-nav-strong {
     color: #4a4a4a;
