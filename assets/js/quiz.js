@@ -39,10 +39,10 @@ $(document).ready(function () {
                     var result = $(`<div id='question' class='field is-size-4'><strong class='has-text-success'>You got ${right}/${questions.length} right.</strong></br><div class='is-size-5'> Pretty good! You must be quite close to Katie and Mike. Scroll down for the full story!</div></div>`).hide();
                 }
                 else if (right < questions.length - 1 && right >= 2){
-                    var result = $(`<div id='question' class='field is-size-4'><strong class='orange'>You got ${right}/${questions.length} right.</strong></br><div class='is-size-5'> You've got some work to do! Scroll down and read up...</div></div>`).hide();
+                    var result = $(`<div id='question' class='field is-size-4'><strong class='orange'>You got ${right}/${questions.length} right.</strong></br><div class='is-size-5'> You got a few right! Scroll down to get the details!</div></div>`).hide();
                 }
                 else {
-                    var result = $(`<div id='question' class='field is-size-4'><strong class='has-text-danger'>You got ${right}/${questions.length} right.</strong></br><div class='is-size-5'> Looks like we have a lot to catch up on! Scroll down and take notes...</div></div>`).hide();
+                    var result = $(`<div id='question' class='field is-size-4'><strong class='has-text-danger'>You got ${right}/${questions.length} right.</strong></br><div class='is-size-5'> Looks like we have a few stories to catch up on! :) Scroll down to get the full story!</div></div>`).hide();
                 }
                 $('#couple-20').replaceWith('<div id="couple-20" class="column is-4 is-offset-1"><p class="title is-2 "><span class="rsvp-label">Your Results</span></p></div>');
                 $('#question').replaceWith(result);
