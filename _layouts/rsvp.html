@@ -2,18 +2,6 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117162422-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-117162422-1');
-  </script>
-
-
-
   <title>K&M - RSVP</title>
 
   <meta charset="utf-8">
@@ -29,15 +17,8 @@
   <meta name="keywords" content="Wedding, California, Marriage, Wife, Husband">
   <meta name="author" content="Mike Danielczuk">
 
-
-  <!--[htmlclean-protect]-->
-  <!-- inject:css -->
-  <!-- endinject -->
-  <!--[/htmlclean-protect]-->
-  <!--<Deject>-->
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/animate.css">
-  <!--</Deject>-->
 </head>
 
 
@@ -83,38 +64,56 @@
   </nav>
 
   <section id="rsvp" class="hero section is-fullheight">
-    <div class="columns is-centered">
-      <div class="column is-6">
-        <br>
-        <br class="is-hidden-mobile">
-        <br class="is-hidden-mobile">
-        <br class="is-hidden-mobile">
-        <span class="is-size-2 rsvp-label-2">
-          <strong id="rsvp-title">Say You'll Be There!</strong>
-        </span>
-        <br>
-        <br>
-
-        <div id="rsvp-box" class="box">
-          <div id="rsvp-initial">
-            <div class="field">
-              <label class="label is-medium">Let's find your RSVP</label>
-              <div class="control">
-                <input id="email-input" class="input is-medium" type="text" placeholder="Email address">
-              </div>
-              <p id="help-message" class="help">Enter the email address that your invitation was sent to</p>
-              <div class="field">
-                <p class="control">
-                  <button id="check-email" onclick="checkEmail()" class="button is-link is-medium">
-                    Continue
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="columns">
+      <div class="column is-12">
+        <center>
+          <p class="title is-2 ">
+            <br class="is-hidden-tablet-only">
+            <span class="rsvp-label-2">Say You'll Be There!</span>
+            <br>
+          </p>
+        </center>
       </div>
     </div>
+
+    <div class="columns">
+      <div class="column is-12">
+        <center>
+          <div id="rsvp-form-div">
+          <form id="rsvp-pw-form" method="POST" action="https://script.google.com/macros/s/AKfycbwDnHIUu_sq8bvgRrvnCk6fOmeFWf2W3LlVY5bt13v-f8vmlXMXpB8xBTAcgEAlKw2hWg/exec">
+            <div>
+              <small id="invalid-id" style="opacity: 0">Invalid RSVP ID!</small>
+            </div>
+            <input name="rsvp_id" type="text" class="textbox-input" placeholder="RSVP ID" required>
+            <div>
+              <p id="pw-loader" class="loader" style="display: none"></p>
+              <button type="submit" id="rsvp-pw-sub">Submit</button>
+            </div>
+          </form>
+          <form style="display: none" id="rsvp-email-form" onsubmit="return false;">
+            <div class="thin" style="margin: 1em">
+              Based on current policy and pandemic trends, no specific 
+              COVID-related restrictions are expected at this time. The majority of the wedding 
+              will take place outside, including the ceremony, cocktail hour, and dinner. 
+              Dancing will take place indoors though an outdoor bar and reception spaces will 
+              remain open throughout the duration of the event. We will continue to monitor trends 
+              and regulations as the wedding approaches, and our policy is therefore subject 
+              to change depending on any shifts in the situation. In order to stay up to date 
+              with any potential changes, please provide your best email contact here.
+            </div>
+            <input type="email" pattern=".+@.+\..+" class="textbox-input" id="rsvp_email" name="rsvp_email" placeholder="Email" required>
+            <div>
+              <button type="submit" onclick="record_email()">Next</button>
+            </div>
+          </form>
+          <form style="display: none" id="rsvp-events-form" onsubmit="return false;">
+          </form>
+          <form style="display: none" id="rsvp-food-form" method="POST" action="https://script.google.com/macros/s/AKfycbwDnHIUu_sq8bvgRrvnCk6fOmeFWf2W3LlVY5bt13v-f8vmlXMXpB8xBTAcgEAlKw2hWg/exec">
+          </form>
+          <p id="end-loader" class="loader" style="display: none"></p>
+          </div>
+        </center>
+      </div>
     </div>
     <br>
     <br>
@@ -131,7 +130,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script src="../node_modules/airtable/build/airtable.browser.js"></script>
   <script src="/assets/js/scroll-animations.js"></script>
   <script src="/assets/js/rsvp.js"></script>
   <script src="/assets/js/navigation.js"></script>

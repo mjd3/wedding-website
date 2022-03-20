@@ -9,7 +9,6 @@
     "url": "http://github.com/mjd3/wedding-website.git"
   },
   "dependencies": {
-    "airtable": "^0.9.0",
     "jquery": "^3.2.1",
     "scrollreveal": "^3.3.6"
   },

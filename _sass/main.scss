@@ -234,17 +234,6 @@ p{
   background-size: cover;
 }
 
-// #schedule {
-//   background: url("/assets/images/cool_sky.jpg") no-repeat center center fixed; 
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-
-#rsvp{
-  background-image: url("/assets/images/geometry2.png");
-}
 .rsvp-label{
   position: relative;
   z-index: 1000;
@@ -344,6 +333,232 @@ p{
   width: 80%;
   left: 10%;
 }
+
+fieldset {
+  font-size: 1.3em;
+  border: 3px solid $blue;
+  border-radius: 0.5em;
+  margin: 1em;
+}
+
+legend {
+  color: white;
+  background: $blue;
+  border: 5px solid $blue;
+  padding: 2em 2em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  float: inline-start;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.grid-row {
+  margin-bottom: 0.5em
+}
+.grid-row, .grid-header {
+  display:flex;
+  flex: 1 0 auto;
+  height: auto;
+}
+
+.header-item-ev {
+  flex-basis: 25%;
+  text-align: center;
+/*   border:1px solid transparent; */
+}
+.header-item-food {
+  flex-basis: 25%;
+  text-align: center;
+/*   border:1px solid transparent; */
+}
+.header-item-other {
+  flex-basis: 50%;
+  text-align: center;
+/*   border:1px solid transparent; */
+}
+
+.flex-item:before {
+  content: '';
+  padding-top: 25%;
+}
+.flex-item-ev {
+  display: flex;
+  flex-basis: 25%;
+  justify-content: center;
+  align-items:center;
+  font-size: 1em;
+  font-weight:normal;
+  color: $grey-dark;
+}
+.flex-item-food {
+  display: flex;
+  flex-basis: 12.5%;
+  justify-content: center;
+  align-items:center;
+  font-size: 1em;
+  font-weight: normal;
+  color: $grey-dark;
+  flex-shrink: 1;
+  overflow-wrap: break-word;
+}
+.flex-item-name {
+  display: flex;
+  flex-basis: 50%;
+  flex-grow: 1;
+  justify-content: right;
+  align-items: right;
+  font-size: 1em;
+  font-weight:normal;
+  color: $grey-dark;
+}
+.flex-item-other {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight:normal;
+  color: $grey-dark;
+}
+.flex-item:nth-child(1) {
+  border:none;
+  font-size:1.15em;
+  color: $grey-dark;
+  width: 180px;
+  // justify-content: left;
+}
+.diet-other {
+  font-size: 1em;
+}
+
+/* HTML5 Boilerplate accessible hidden styles */
+
+[type="radio"], [type="checkbox"] {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+}
+
+/* One radio button per line */
+label {
+  /*display: block;*/
+  cursor: pointer;
+}
+
+/* the basic, unchecked style */
+input[type="radio"] + span:before,
+input[type="checkbox"] + span:before{
+  content: '';
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.25em;
+  border-radius:.25em;
+  border: 0.125em solid #fff;
+  box-shadow: 0 0 0 0.15em $grey-dark;
+  transition: 0.5s ease all;
+}
+// input[type="checkbox"] + span:before {
+//   margin-right: 0.75em;
+// }
+
+/* the checked style using the :checked pseudo class */
+input[type="radio"]:checked + span:before,
+input[type="checkbox"]:checked + span:before{
+  background: $green;
+  box-shadow: 0 0 0 0.25em $grey-dark;
+}
+
+/* never forget focus styling */
+input[type="radio"]:focus span:after,
+input[type="checkbox"]:focus span:after {
+  content: '\0020\2190';
+  font-size: 1.5em;
+  line-height: 1;
+  vertical-align: -0.125em;
+}
+
+button[type="submit"], button[type="back"] {
+  background-color: $blue;
+  border: none;
+  border-radius: 0.25em;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em;
+  cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+  border-radius: 0.25em;
+  outline-color: $blue;
+}
+
+.textbox-input {
+  text-align: center;
+  font-size: 2em;
+  // margin: 1em;
+}
+
+#pw-loader, #end-loader {
+  width: 1.6em;
+  height: 1.6em;
+  margin: 1em;
+  border: 0.5em solid white;
+  border-radius: 50%;
+  border-top: 0.5em solid $blue;
+  border-right: 0.5em solid $blue;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut;
+  animation: fadeOut;
+  opacity: 0;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s
+}
+
+#invalid-id {
+  color: red;
+}
+
+
 
 
 // @media (orientation: portrait) and (min-width: 600px){

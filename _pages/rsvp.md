@@ -1,0 +1,4 @@
+---
+layout: rsvp
+permalink: /rsvp
+---
