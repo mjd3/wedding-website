@@ -48,7 +48,7 @@ const person_food_fn = (nm, i) => `
   <legend>${nm}</legend>
 <div class="wrapper" id="form-wrapper-food-${i}">
 <div class="grid-row">
-  <div class="header-item-100">Any dietary restrictions?</div>
+  <div class="header-item-100">Any dietary restrictions? (leave blank if None)</div>
 </div>
 <div class="grid-row">
   <div class="flex-item-25">Vegetarian</div>
