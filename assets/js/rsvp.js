@@ -251,7 +251,7 @@ function record_events(e) {
     for (let i=0; i < forms.length; i++) {
         forms[i].set("BBQ", events_form[`bbq-${i}`].value === "yes" ? 1 : 0)
         forms[i].set("Wedding", events_form[`wed-${i}`].value === "yes" ? 1 : 0)
-        forms[i].set("Rehearsal", (`rh-${i}` in events_form) & (events_form[`rh-${i}`].value === "yes") ? 1 : 0)
+        forms[i].set("Rehearsal", `rh-${i}` in events_form ? (events_form[`rh-${i}`].value === "yes" ? 1 : 0) : 0)
     }
 
     ready_to_submit = true

@@ -377,7 +377,6 @@ legend {
   justify-content: center;
   align-items:center;
   color: $grey-dark;
-  margin: 0.25em;
 }
 .flex-item-50 {
   display: flex;
@@ -385,7 +384,6 @@ legend {
   justify-content: center;
   align-items: center;
   color: $grey-dark;
-  margin: 0.25em;
 }
 .flex-item-100 {
   display: flex;
@@ -393,7 +391,6 @@ legend {
   justify-content: center;
   align-items: center;
   color: $grey-dark;
-  margin: 0.25em;
 }
 .flex-item:nth-child(1) {
   border:none;
@@ -409,6 +406,7 @@ legend {
   height: auto !important;
   white-space: unset !important;
   font-size: clamp(14px, 4vw, 1.1em) !important;
+  margin: 0.25em;
 }
 
 /* HTML5 Boilerplate accessible hidden styles */
