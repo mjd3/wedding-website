@@ -478,6 +478,7 @@ input[type="text"], input[type="email"] {
 .textbox-input {
   text-align: center;
   font-size: clamp(14px, 8vw, 2em);
+  max-width: 80%;
 }
 
 #pw-loader, #end-loader {
