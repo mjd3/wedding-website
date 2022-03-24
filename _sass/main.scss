@@ -11,7 +11,6 @@ $nav-button-right-spacing: 0px;
 $rose:#F5E5E5;
 $green:#C2D69B;
 $blue: #95B3D7;
-$purple: #2F1D42;
 $navbar-height: 3rem;
 $column-gap: 2rem;
 $footer-background-color: #0A0909;
@@ -128,7 +127,6 @@ html,body{
   font-size: 1.3em;
 }
 
-
 .date{
   font-weight: 500;
   font-size: 1.2em;
@@ -145,6 +143,14 @@ html,body{
 
 .logo{
   color: $link;
+}
+
+.home-nav {
+  color: white;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .column-couple-text{
@@ -260,14 +266,6 @@ p{
   color: grey !important;
 }
 
-.main-text{
-  opacity: 0.7;
-  font-size: 5.1em;
-  line-height: 0.8em;
-  font-weight: 800;
-  color: $purple;
-}
-
 .main-image{
   overflow: hidden;
 }
@@ -335,7 +333,7 @@ p{
 }
 
 fieldset {
-  font-size: 1.3em;
+  font-size: clamp(12px, 4vw, 1.3em);
   border: 3px solid $blue;
   border-radius: 0.5em;
   margin: 1em;
@@ -347,6 +345,7 @@ legend {
   border: 5px solid $blue;
   padding: 2em 2em;
   border-radius: 0.25em;
+  font-size: clamp(18px, 6vw, 1.3em);
   font-weight: bold;
   float: inline-start;
 }
@@ -356,71 +355,42 @@ legend {
   flex-direction: column;
 }
 .grid-row {
-  margin-bottom: 0.5em
-}
-.grid-row, .grid-header {
+  margin-bottom: 0.5em;
   display:flex;
   flex: 1 0 auto;
   height: auto;
 }
 
-.header-item-ev {
-  flex-basis: 25%;
+.header-item-100 {
+  font-size: clamp(18px, 6vw, 1.2em);
+  flex-basis: 100%;
   text-align: center;
-/*   border:1px solid transparent; */
-}
-.header-item-food {
-  flex-basis: 25%;
-  text-align: center;
-/*   border:1px solid transparent; */
-}
-.header-item-other {
-  flex-basis: 50%;
-  text-align: center;
-/*   border:1px solid transparent; */
+  margin-top: 1.5em;
 }
 
 .flex-item:before {
   content: '';
   padding-top: 25%;
 }
-.flex-item-ev {
+.flex-item-25 {
   display: flex;
   flex-basis: 25%;
   justify-content: center;
   align-items:center;
-  font-size: 1em;
-  font-weight:normal;
   color: $grey-dark;
 }
-.flex-item-food {
-  display: flex;
-  flex-basis: 12.5%;
-  justify-content: center;
-  align-items:center;
-  font-size: 1em;
-  font-weight: normal;
-  color: $grey-dark;
-  flex-shrink: 1;
-  overflow-wrap: break-word;
-}
-.flex-item-name {
-  display: flex;
-  flex-basis: 50%;
-  flex-grow: 1;
-  justify-content: right;
-  align-items: right;
-  font-size: 1em;
-  font-weight:normal;
-  color: $grey-dark;
-}
-.flex-item-other {
+.flex-item-50 {
   display: flex;
   flex-basis: 50%;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
-  font-weight:normal;
+  color: $grey-dark;
+}
+.flex-item-100 {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
   color: $grey-dark;
 }
 .flex-item:nth-child(1) {
@@ -428,10 +398,15 @@ legend {
   font-size:1.15em;
   color: $grey-dark;
   width: 180px;
-  // justify-content: left;
 }
 .diet-other {
-  font-size: 1em;
+  font-size: clamp(14px, 4vw, 1.1em);
+}
+
+.tag_custom {
+  height: auto !important;
+  white-space: unset !important;
+  font-size: clamp(14px, 4vw, 1.1em) !important;
 }
 
 /* HTML5 Boilerplate accessible hidden styles */
@@ -446,9 +421,7 @@ legend {
   width: 1px;
 }
 
-/* One radio button per line */
 label {
-  /*display: block;*/
   cursor: pointer;
 }
 
@@ -458,16 +431,15 @@ input[type="checkbox"] + span:before{
   content: '';
   display: inline-block;
   width: 1.2em;
-  height: 1.2em;
+  height: clamp(14px, 4vw, 1.2em);
+  width: clamp(14px, 4vw, 1.2em);
   vertical-align: -0.25em;
+  align-content: center;
   border-radius:.25em;
   border: 0.125em solid #fff;
   box-shadow: 0 0 0 0.15em $grey-dark;
   transition: 0.5s ease all;
 }
-// input[type="checkbox"] + span:before {
-//   margin-right: 0.75em;
-// }
 
 /* the checked style using the :checked pseudo class */
 input[type="radio"]:checked + span:before,
@@ -485,13 +457,13 @@ input[type="checkbox"]:focus span:after {
   vertical-align: -0.125em;
 }
 
-button[type="submit"], button[type="back"] {
+button[type="submit"], button[type="button"] {
   background-color: $blue;
   border: none;
   border-radius: 0.25em;
   color: white;
   text-align: center;
-  font-size: 1.5em;
+  font-size: clamp(14px, 6vw, 1.5em);
   margin: 1em;
   cursor: pointer;
 }
@@ -503,8 +475,7 @@ input[type="text"], input[type="email"] {
 
 .textbox-input {
   text-align: center;
-  font-size: 2em;
-  // margin: 1em;
+  font-size: clamp(14px, 8vw, 2em);
 }
 
 #pw-loader, #end-loader {
@@ -558,20 +529,15 @@ input[type="text"], input[type="email"] {
   color: red;
 }
 
+@media only screen and (max-width: 1023px) {
+  .scrolled-nav {
+    height: 10px !important;
+  }
 
-
-
-// @media (orientation: portrait) and (min-width: 600px){
-//   #main{
-//     background-image: url("/assets/images/c-3-color-slim-ipad.jpg");
-//   }
-// }
-
-// @media (orientation: portrait) and (max-width: 600px){
-//   #main{
-//     background-image: url("/assets/images/c-3-color-slim.jpg");
-//   }
-// }
+  .home-nav-strong {
+    color: $grey-dark;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .column-couple-text{
@@ -583,26 +549,6 @@ input[type="text"], input[type="email"] {
     padding-left: 0em !important;
     padding-top: 0em !important;
     padding-right: 0em !important;
-  }
-  .home-nav-strong {
-    color: #4a4a4a;
-
-    &:hover {
-      color: $blue;
-    }
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .scrolled-nav {
-    height: 10px !important;
-  }
-
-  .home-nav-strong {
-    color: #4a4a4a;
-
-    &:hover {
-      color: $blue;
-    }
   }
 }
 

@@ -4,15 +4,13 @@ document.getElementById("logo").addEventListener("click", toggleNav);
 
 function toggleNav() {
     var nav = document.getElementById("main-menu");
-    var className = nav.getAttribute("class");
     var burger = document.getElementById("nav-toggle");
-    var burgerClassName = burger.getAttribute("class");
-    if (className == "navbar-menu") {
-        nav.className = "navbar-menu is-active";
-        burger.className = "navbar-burger is-active"
+    if (!nav.classList.contains("is-active")) {
+        nav.classList.add("is-active")
+        burger.classList.add("is-active")
     } else {
-        nav.className = "navbar-menu";
-        burger.className = "navbar-burger"
+        nav.classList.remove("is-active")
+        burger.classList.remove("is-active")
     }
 }
 
