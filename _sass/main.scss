@@ -347,7 +347,6 @@ legend {
   border-radius: 0.25em;
   font-size: clamp(18px, 6vw, 1.3em);
   font-weight: bold;
-  float: inline-start;
 }
 
 .wrapper {
@@ -378,6 +377,7 @@ legend {
   justify-content: center;
   align-items:center;
   color: $grey-dark;
+  margin: 0.25em;
 }
 .flex-item-50 {
   display: flex;
@@ -385,6 +385,7 @@ legend {
   justify-content: center;
   align-items: center;
   color: $grey-dark;
+  margin: 0.25em;
 }
 .flex-item-100 {
   display: flex;
@@ -392,6 +393,7 @@ legend {
   justify-content: center;
   align-items: center;
   color: $grey-dark;
+  margin: 0.25em;
 }
 .flex-item:nth-child(1) {
   border:none;
