@@ -200,7 +200,8 @@ function check_pw(e) {
     .catch(console.error);
 }
 
-function record_email() {
+function record_email(e) {
+    e.preventDefault()
     email = document.getElementById("rsvp_email").value
     for (let fd of forms) {
         fd.set("Email", email)
@@ -382,5 +383,6 @@ function submit_form(e) {
 }
 
 pw_form.addEventListener("submit", check_pw)
+email_form.addEventListener("submit", record_email)
 events_form.addEventListener("submit", record_events)
 food_form.addEventListener("submit", submit_form)
