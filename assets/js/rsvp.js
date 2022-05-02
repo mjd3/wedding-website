@@ -335,7 +335,7 @@ function submit_form(e) {
     submitted.setAttribute("class", "thin")
     submitted.setAttribute("style", "display: block")
     const num_attending = attending.reduce((a, b) => a + b)
-    let promises = []
+    let form_entries = []
     for (let i=0; i < forms.length; i++) {
         forms[i].set("Meal", !!food_form[`meal-${i}`] ? food_form[`meal-${i}`].value : "")
         forms[i].set("Vegetarian", !!food_form[`veggie-${i}`] ? (food_form[`veggie-${i}`].checked ? 1 : 0) : 0)
@@ -343,20 +343,19 @@ function submit_form(e) {
         forms[i].set("Gluten Free", !!food_form[`gf-${i}`] ? (food_form[`gf-${i}`].checked ? 1 : 0) : 0)
         forms[i].set("Dairy Free", !!food_form[`df-${i}`] ? (food_form[`df-${i}`].checked ? 1 : 0) : 0)
         forms[i].set("Other", !!food_form[`other-${i}`] ? food_form[`other-${i}`].value : "")
-        promises.push(fetch(e.target.action, {
-            method: 'POST',
-            body: forms[i],
-        })
-        .then(res => res.json())
-        .then(data => {
-            submitted.textContent = (success | data.result === "success") ? success_str(num_attending) : failure_str
-            if ((forms[i].get("Rehearsal") == 1) | (forms[i].get("Wedding") == 1) | (forms[i].get("BBQ") == 1)) {
-              document.getElementById("rsvp-form-div").innerHTML += person_schedule_fn(forms[i].get("Name"), i)
-            }
-        })
-        .catch())
+        form_entries.push(Object.fromEntries(forms[i].entries()))
     }
-    Promise.all(promises).then(() => {
+    fetch(e.target.action, {
+      method: 'POST',
+      body: JSON.stringify(form_entries),
+    })
+    .then(res => res.json())
+    .then(data => {
+        submitted.textContent = (success | data.result === "success") ? success_str(num_attending) : failure_str
+        for (let i=0; i < forms.length; i++) {
+          if ((forms[i].get("Rehearsal") == 1) | (forms[i].get("Wedding") == 1) | (forms[i].get("BBQ") == 1))
+            document.getElementById("rsvp-form-div").innerHTML += person_schedule_fn(forms[i].get("Name"), i)
+        }
         let el = document.getElementById("end-loader")
         el.setAttribute("style", "display: none")
         document.getElementById("rsvp-form-div").prepend(submitted)
