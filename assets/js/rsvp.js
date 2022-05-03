@@ -192,7 +192,7 @@ function check_pw(e) {
                 welcome_back.setAttribute("class", "thin")
                 welcome_back.textContent = "Welcome back! We've filled in your information from your previous RSVP. Please update anything that has changed."
                 email_form.prepend(welcome_back)
-                email_form["rsvp_email"].value = stored[res.names[0]][1]
+                email_form["rsvp_email"].value = stored[Object.keys(stored)[0]][1]
             }
             email_form.setAttribute("style", "display: block")
         }
