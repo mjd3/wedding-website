@@ -330,7 +330,6 @@ function submit_form(e) {
     food_form.setAttribute("style", "display: none")
     let el = document.getElementById("end-loader")
     el.setAttribute("style", "display: block")
-    let success = true
     let submitted = document.createElement("span")
     submitted.setAttribute("class", "thin")
     submitted.setAttribute("style", "display: block")
@@ -347,11 +346,11 @@ function submit_form(e) {
     }
     fetch(e.target.action, {
       method: 'POST',
-      body: JSON.stringify(form_entries),
+      body: JSON.stringify(form_entries)
     })
     .then(res => res.json())
     .then(data => {
-        submitted.textContent = (success | data.result === "success") ? success_str(num_attending) : failure_str
+        submitted.textContent = data.result === "success" ? success_str(num_attending) : failure_str
         for (let i=0; i < forms.length; i++) {
           if ((forms[i].get("Rehearsal") == 1) | (forms[i].get("Wedding") == 1) | (forms[i].get("BBQ") == 1))
             document.getElementById("rsvp-form-div").innerHTML += person_schedule_fn(forms[i].get("Name"), i)
